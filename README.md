@@ -23,6 +23,19 @@ The classification method and corresponding sensors will be selected through ini
 
 ## System Architecture
 
+```mermaid
+flowchart TD
+
+    C["Central Control / Main MCU"]
+    A["Conveyor / Transport<br>DC Motor + Motor Driver"]
+    B["Detection / Sorting<br>Sensors + Servo"]
+    D["Monitoring Dashboard"]
+
+    C <--> A
+    C <--> B
+    C --> D
+```
+
 The system consists of three connected subsystems:
 
 | Subsystem | Purpose |
